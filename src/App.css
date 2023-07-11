@@ -1,0 +1,7 @@
+.floating-alert-container {
+  position: fixed;
+  top: 5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 15rem;
+}
