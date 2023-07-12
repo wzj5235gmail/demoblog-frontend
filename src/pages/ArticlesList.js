@@ -52,7 +52,32 @@ export const ArticlesList = ({ isSearch }) => {
               <Alert variant='danger' onClose={() => setShowAlert(false)} dismissible>Please Login!</Alert>
             </div>
           )}
-          {articles.length !== 0 && (
+          {articles.length === 0 ? (
+            <div>
+              <div className="card-body placeholder-glow mb-5">
+                <h2 className="card-title mb-3">
+                  <span className='placeholder col-6'></span>
+                </h2>
+                <p className='card-text placeholder col-12'></p>
+                <p className='card-text placeholder col-12'></p>
+                <p className='card-text placeholder col-9'></p>
+                <p className='card-text placeholder col-12'></p>
+                <p className='card-text placeholder col-12'></p>
+                <p className='card-text placeholder col-6'></p>
+              </div>
+              <div className="card-body placeholder-glow">
+                <h2 className="card-title mb-3">
+                  <span className='placeholder col-6'></span>
+                </h2>
+                <p className='card-text placeholder col-12'></p>
+                <p className='card-text placeholder col-12'></p>
+                <p className='card-text placeholder col-9'></p>
+                <p className='card-text placeholder col-12'></p>
+                <p className='card-text placeholder col-12'></p>
+                <p className='card-text placeholder col-6'></p>
+              </div>
+            </div>
+          ) : (
             <div>
               {articles.map((article) => <ArticleCard article={article} key={article} />)}
             </div>
